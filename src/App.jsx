@@ -112,12 +112,26 @@ export default function App() {
     >
       <header className="max-w-6xl mx-auto px-6 py-12 text-center">
         <div className="flex justify-between items-center mb-10">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-black/10 dark:bg-white/10"></div>
+          {/* Dark / Light Toggle - Fixed Top */}
           <button
             onClick={() => setDarkMode(!darkMode)}
-            className="p-2 rounded-full bg-black/10 dark:bg-white/10"
+            className="
+              fixed
+              top-4
+              right-4
+              z-50
+              p-3
+              rounded-full
+              backdrop-blur
+              shadow-lg
+              transition
+              bg-black/20 text-white
+              hover:scale-110
+              dark:bg-white/20 dark:text-white
+            "
+            aria-label="Toggle Dark Mode"
           >
-            {darkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+            {darkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
           </button>
         </div>
 
